@@ -19,4 +19,4 @@ const getIndicesOf = (searchStr, str, caseSensitive) => {
 
 const cleanCeps = ceps => ceps.map(cep => cep.replace('-', ''));
 
-export { getIndicesOf, cleanCeps };
+module.exports = { getIndicesOf, cleanCeps };

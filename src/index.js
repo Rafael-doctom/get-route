@@ -1,7 +1,7 @@
-import axios from 'axios';
-import { isArrayOfCEPs, isModeValid, isValidIndexes } from './validate.js';
-import { cleanCeps, getIndicesOf } from './utils.js';
-import errors from './errors.js';
+const axios = require('axios').default;
+const { isArrayOfCEPs, isModeValid, isValidIndexes } = require('./validate.js');
+const { cleanCeps, getIndicesOf } = require('./utils.js');
+const errors = require('./errors.js');
 
 const extractRoute = (data, identifier) => {
   const [, index] = getIndicesOf(`cep ${identifier}`, data, true);
@@ -76,4 +76,4 @@ const getRoute = async (ceps, mode = 'driving') => {
   }
 };
 
-export default getRoute;
+module.exports = getRoute;
