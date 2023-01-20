@@ -1,7 +1,7 @@
 const isString = value => typeof value == 'string';
 const isArray = value => Array.isArray(value);
 /*  */
-const isCEP = value => isString(value) && value.length == 8;
+const isCEP = value => isString(value) && value.replace('-', '').length == 8;
 
 const isValidIndexes = (start, end) => start > -1 && end > -1;
 
