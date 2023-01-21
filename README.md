@@ -23,9 +23,9 @@ console.log(response);
 ````javascript
 {
   ok: true,
-  distanceRaw: 1179,
   distance: '1,2 km',
-  timeRaw: 283,
-  time: '5 min'
+  distanceRaw: 1179,
+  time: '5 min',
+  timeRaw: 283
 }
 ````
