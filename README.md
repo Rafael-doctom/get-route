@@ -29,3 +29,24 @@ console.log(response);
   timeRaw: 283
 }
 ````
+<br/>
+
+## Specifications
+
+### Arguments
+
+| argument | required | default   |         accepted values       |
+|----------|----------|-----------|-------------------------------|
+| ceps     | true     | none      | array of strings (valid ceps) |
+| mode     | false    | 'driving' | either 'driving' or 'walking' |
+
+
+### Response
+
+| property    | type    | explanation                                            |
+|-------------|---------|--------------------------------------------------------|
+| ok          | boolean | returns true if successful, otherwise returns false    |
+| distance    | string  | formatted distance (in kilometers). e.g.: "5,5 km"     |
+| distanceRaw | number  | distance in meters. e.g.: 5497                         |
+| time        | string  | formatted time (in minutes/hours/days). e.g.: "17 min" |
+| timeRaw     | number  | time in seconds. e.g.: 1049                            |
