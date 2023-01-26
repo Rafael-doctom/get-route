@@ -15,7 +15,10 @@ const extractRoute = (data, identifier) => {
     throw new Error();
   }
 
-  const [[distanceRaw, distance], [timeRaw, time]] = eval(`[${rawString.substring(start, end)}]`);
+  const arrayAsString = `[${rawString.substring(start, end)}]`;
+  const routeArray = Function('return ' + arrayAsString)();
+
+  const [[distanceRaw, distance], [timeRaw, time]] = routeArray;
 
   return { distanceRaw, distance, timeRaw, time };
 };
